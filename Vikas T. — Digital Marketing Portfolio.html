@@ -1,0 +1,426 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Vikas T. — Digital Marketing Portfolio</title>
+<meta name="description" content="Portfolio of Vikas T., an MBA Marketing student building hands-on experience in digital marketing, content, social media and marketing analytics.">
+<meta property="og:title" content="Vikas T. — Digital Marketing Portfolio">
+<meta property="og:description" content="Portfolio of Vikas T., an MBA Marketing student building hands-on experience in digital marketing, content, social media and marketing analytics.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#08060D;--bg2:#110D1A;--card:#171321;--white:#FFFFFF;--soft:#F4F0FF;--muted:#A7A1B3;
+  --purple:#8B5CF6;--purple2:#A855F7;--pink:#EC4899;--cyan:#22D3EE;--blue:#3B82F6;--orange:#FB923C;
+  --grad:linear-gradient(90deg,#8B5CF6,#EC4899,#FB923C);--grad2:linear-gradient(90deg,#3B82F6,#22D3EE,#8B5CF6);
+  --border:rgba(255,255,255,.1);
+  box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);
+}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-behavior:smooth;scroll-padding-top:110px}
+body{margin:0;background:var(--bg);color:var(--soft);font-family:'Manrope',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;line-height:1.55;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+h1,h2,h3{margin:0;font-family:'Space Grotesk',sans-serif;font-weight:700;letter-spacing:-.02em;line-height:1.02;color:var(--white)}
+p{margin:0;color:var(--muted)}
+a{color:inherit;text-decoration:none}
+button{font:inherit;background:none;border:none;color:inherit}
+.section{max-width:1180px;margin:0 auto;padding:100px 24px;position:relative;z-index:1}
+.label{font-size:.75rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--purple2);margin-bottom:16px;display:block}
+.lead{font-size:clamp(1.05rem,2vw,1.3rem);margin-top:18px;max-width:48ch}
+.role{margin-top:14px;font-weight:700;color:var(--soft)}
+h1{font-size:clamp(2.6rem,8.5vw,5.6rem)}
+.grad-text{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+:focus-visible{outline:2px solid var(--purple2);outline-offset:3px}
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .6s ease,transform .6s ease}
+.reveal.in{opacity:1;transform:none}
+
+/* bg fx */
+.orb{position:fixed;border-radius:50%;filter:blur(90px);opacity:.32;pointer-events:none;z-index:0}
+.orb1{width:460px;height:460px;background:var(--purple);top:-120px;left:-100px;animation:drift1 22s ease-in-out infinite}
+.orb2{width:420px;height:420px;background:var(--pink);top:35%;right:-150px;animation:drift2 26s ease-in-out infinite}
+.orb3{width:360px;height:360px;background:var(--cyan);bottom:-140px;left:25%;animation:drift1 28s ease-in-out infinite reverse;opacity:.22}
+@keyframes drift1{0%,100%{transform:translate(0,0)}50%{transform:translate(36px,26px)}}
+@keyframes drift2{0%,100%{transform:translate(0,0)}50%{transform:translate(-28px,34px)}}
+.grid-fx{position:fixed;inset:0;background-image:linear-gradient(var(--border) 1px,transparent 1px),linear-gradient(90deg,var(--border) 1px,transparent 1px);background-size:52px 52px;opacity:.12;pointer-events:none;z-index:0}
+
+/* buttons/tags */
+.btn{display:inline-flex;align-items:center;gap:8px;padding:16px 30px;border-radius:100px;font-weight:700;font-size:.92rem;transition:transform .3s cubic-bezier(.2,.8,.2,1),background .3s,color .3s}
+.btn-grad{color:var(--white);background:linear-gradient(var(--card),var(--card)) padding-box,var(--grad) border-box;border:1px solid transparent}
+.btn-grad:hover{background:var(--grad)}
+.btn-line{border:1px solid var(--border);color:var(--soft)}
+.btn-line:hover{border-color:var(--purple2);color:var(--purple2)}
+.btn-sm{padding:11px 22px;font-size:.82rem}
+.btn-row{display:flex;gap:16px;flex-wrap:wrap;margin-top:34px}
+.link-arrow{display:inline-block;margin-top:20px;font-weight:700;font-size:.9rem;color:var(--purple2)}
+.tag{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--border);border-radius:100px;padding:9px 16px;font-size:.82rem;font-weight:600;margin:0 8px 8px 0;color:var(--soft)}
+.tag.sm{font-size:.62rem;letter-spacing:.05em;text-transform:uppercase;padding:5px 10px;border-color:transparent;background:rgba(139,92,246,.15);color:var(--purple2)}
+.tag em{font-style:normal;color:var(--muted);font-weight:500;font-size:.76rem}
+.ph-box{border:1.5px dashed var(--border);border-radius:14px;display:flex;align-items:center;justify-content:center;color:var(--muted);font-size:.75rem;letter-spacing:.05em;text-transform:uppercase;font-weight:600;min-height:170px;text-align:center;padding:20px}
+
+/* nav */
+.nav{position:fixed;top:calc(18px + env(safe-area-inset-top,0px));left:50%;transform:translateX(-50%);z-index:50;width:min(1100px,92%);border-radius:100px;border:1px solid var(--border);background:rgba(23,19,33,.55);backdrop-filter:blur(16px);transition:background .3s,box-shadow .3s}
+.nav.scrolled{background:rgba(23,19,33,.9);box-shadow:0 14px 40px -14px rgba(0,0,0,.6)}
+.nav-inner{display:flex;align-items:center;gap:22px;padding:13px 20px}
+.nav-logo{font-family:'Space Grotesk',sans-serif;font-weight:700;color:var(--white);font-size:.95rem}
+.nav-links{display:flex;gap:26px;flex:1;justify-content:center}
+.nav-link{font-size:.86rem;font-weight:600;position:relative;padding:4px 0;color:var(--muted)}
+.nav-link::after{content:'';position:absolute;left:0;bottom:-2px;width:0;height:2px;background:var(--grad);transition:width .25s}
+.nav-link:hover,.nav-link.active{color:var(--white)}
+.nav-link:hover::after,.nav-link.active::after{width:100%}
+.hamburger{display:none;width:34px;height:34px;flex-direction:column;justify-content:center;gap:5px;cursor:pointer}
+.hamburger span{display:block;height:2px;background:var(--white);transition:.25s}
+.hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.hamburger.open span:nth-child(2){opacity:0}
+.hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+main{display:block;padding-top:110px;position:relative;z-index:1}
+
+/* hero */
+.hero-split{max-width:1180px;margin:0 auto;padding:30px 24px 40px;display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center;position:relative;z-index:1}
+.scroll-cue{margin-top:70px;color:var(--muted);font-size:.75rem;letter-spacing:.1em;text-transform:uppercase;font-weight:700}
+.float-wrap{position:relative;height:340px}
+.fcard{position:absolute;background:rgba(23,19,33,.6);border:1px solid var(--border);border-radius:16px;padding:18px 20px;backdrop-filter:blur(10px);width:180px;box-shadow:0 20px 50px -20px rgba(0,0,0,.6)}
+.fcard strong{font-family:'Space Grotesk',sans-serif;font-size:1rem;margin-top:6px;display:block;color:var(--white)}
+.f1{top:0;left:10%;animation:float1 6s ease-in-out infinite;border-color:rgba(139,92,246,.4)}
+.f2{top:40%;left:36%;animation:float2 7s ease-in-out infinite;border-color:rgba(236,72,153,.4)}
+.f3{top:70%;left:4%;animation:float1 8s ease-in-out infinite reverse;border-color:rgba(34,211,238,.4)}
+@keyframes float1{0%,100%{transform:translateY(0)}50%{transform:translateY(-16px)}}
+@keyframes float2{0%,100%{transform:translateY(0)}50%{transform:translateY(14px)}}
+
+/* marquee */
+.marquee{overflow:hidden;white-space:nowrap;padding:28px 0;border-top:1px solid var(--border);border-bottom:1px solid var(--border);position:relative;z-index:1}
+.marquee-track{display:inline-block;animation:mq 24s linear infinite}
+.marquee-track span{font-family:'Space Grotesk',sans-serif;font-size:1.8rem;font-weight:700;margin:0 28px}
+@keyframes mq{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:30px}
+.p-card{text-align:left;background:var(--card);border:1px solid var(--border);border-top:2px solid var(--pc,var(--purple));border-radius:18px;padding:26px;cursor:pointer;transition:transform .3s,border-color .3s}
+.p-card:hover{transform:translateY(-6px)}
+.p-num{font-family:'Space Grotesk',sans-serif;font-size:.8rem;font-weight:700;color:var(--pc,var(--purple2))}
+.p-card h3{font-size:1.1rem;margin:10px 0 8px;color:var(--white)}
+.p-card p{font-size:.9rem}
+
+.about-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:50px;margin:50px 0;align-items:center}
+.photo-frame{position:relative;border-radius:18px;padding:2px;background:var(--grad)}
+.photo-frame .ph-box{background:var(--bg2);border:none;min-height:340px;border-radius:16px}
+.chip{position:absolute;background:var(--card);border:1px solid var(--border);border-radius:100px;padding:6px 14px;font-size:.68rem;font-weight:700;letter-spacing:.05em;color:var(--white)}
+.chip1{top:-14px;right:20px}
+.chip2{bottom:-14px;left:20px}
+.timeline{list-style:none;margin:40px 0 0;padding:0;border-left:1px solid var(--border)}
+.timeline li{position:relative;padding:0 0 28px 26px;font-weight:600;color:var(--soft)}
+.timeline li::before{content:'';position:absolute;left:-5px;top:4px;width:9px;height:9px;border-radius:50%;background:var(--tc,var(--purple))}
+
+.case-rows{margin-top:40px;border-top:1px solid var(--border)}
+.case-row{display:grid;grid-template-columns:180px 1fr;gap:30px;padding:30px 0;border-bottom:1px solid var(--border)}
+.case-num{display:flex;gap:12px;align-items:baseline;font-family:'Space Grotesk',sans-serif;font-size:1.2rem;font-weight:700;color:var(--purple2)}
+.case-num h3{font-size:1.1rem;color:var(--white)}
+.case-row ul{margin:0;padding-left:20px}
+.case-row li{margin-bottom:6px}
+.workflow{display:flex;flex-wrap:wrap;align-items:center;gap:14px;margin-top:16px}
+.wf-step{border:1px solid var(--border);border-radius:100px;padding:10px 20px;font-size:.78rem;font-weight:700;letter-spacing:.06em;transition:.25s}
+.wf-step:hover{border-color:var(--a,var(--purple2));box-shadow:0 0 18px -4px var(--a,var(--purple2));color:var(--white)}
+.wf-arrow{color:var(--purple2);font-weight:700}
+
+.detail-grid{display:grid;grid-template-columns:1fr 1fr;gap:50px;margin-top:40px}
+.detail-grid p{margin-bottom:20px}
+
+.footer{border-top:1px solid var(--border);padding:50px 24px;max-width:1180px;margin:0 auto;position:relative;z-index:1}
+.footer-top{height:2px;background:var(--grad);max-width:1180px;margin:0 auto}
+.footer-inner{display:flex;flex-wrap:wrap;gap:24px;justify-content:space-between}
+.footer p{font-size:.86rem;margin-top:6px}
+.footer-links,.footer-social{display:flex;gap:18px;flex-wrap:wrap}
+.footer-links a,.footer-social a{font-size:.86rem;font-weight:600;color:var(--soft)}
+.copyright{width:100%;font-size:.76rem;margin-top:10px}
+
+.cursor-dot,.cursor-ring{position:fixed;top:0;left:0;pointer-events:none;z-index:300;transform:translate(-100px,-100px)}
+.cursor-dot{width:6px;height:6px;margin:-3px;border-radius:50%;background:var(--purple2);box-shadow:0 0 14px var(--purple2)}
+.cursor-ring{width:34px;height:34px;margin:-17px;border-radius:50%;border:1px solid rgba(255,255,255,.4);display:flex;align-items:center;justify-content:center;transition:width .25s,height .25s,margin .25s,background .25s}
+.cursor-ring.hover{width:70px;height:70px;margin:-35px;background:rgba(139,92,246,.9);border-color:transparent}
+.cursor-ring.small{width:14px;height:14px;margin:-7px}
+.cursor-label{font-size:.6rem;font-weight:800;color:#fff}
+body:not(.has-cursor) .cursor-dot,body:not(.has-cursor) .cursor-ring{display:none}
+body.has-cursor,body.has-cursor a,body.has-cursor button{cursor:none}
+
+.t-layer{position:fixed;inset:0;background:var(--grad);transform:translateY(101%);transition:transform .32s cubic-bezier(.6,0,.4,1);z-index:400;pointer-events:none}
+.t-layer.in{transform:translateY(0)}
+.t-layer.out{transform:translateY(-101%)}
+
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important;scroll-behavior:auto!important}}
+@media(max-width:860px){
+ .nav-links{display:none}
+ .nav-links.open{display:flex;position:fixed;top:76px;left:16px;right:16px;background:var(--card);border:1px solid var(--border);border-radius:16px;flex-direction:column;padding:10px;z-index:60}
+ .nav-links.open a{padding:12px;color:var(--soft)}
+ .hamburger{display:flex}
+ .hero-split,.about-grid,.detail-grid{grid-template-columns:1fr}
+ .grid-3{grid-template-columns:1fr}
+ .float-wrap{height:220px;margin-top:20px}
+ .case-row{grid-template-columns:1fr}
+ body.has-cursor,body.has-cursor a,body.has-cursor button{cursor:auto}
+}
+</style>
+</head>
+<body>
+<div class="orb orb1"></div><div class="orb orb2"></div><div class="orb orb3"></div><div class="grid-fx"></div>
+<div class="cursor-dot"></div><div class="cursor-ring"><span class="cursor-label"></span></div>
+<div class="t-layer" id="tLayer"></div>
+
+<header class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="#/" data-route="" class="nav-logo">VIKAS T.</a>
+    <nav class="nav-links" id="navLinks">
+      <a href="#/about" data-route="about" class="nav-link">About</a>
+      <a href="#/experience" data-route="experience" class="nav-link">Experience</a>
+      <a href="#/projects" data-route="projects" class="nav-link">Projects</a>
+      <a href="#/skills" data-route="skills" class="nav-link">Skills</a>
+      <a href="#/contact" data-route="contact" class="nav-link">Contact</a>
+    </nav>
+    <a href="#/contact" data-route="contact" class="btn btn-grad btn-sm magnetic" data-cursor="GO">Let's talk →</a>
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<main id="app" tabindex="-1"></main>
+
+<div class="footer-top"></div>
+<footer class="footer">
+  <div class="footer-inner">
+    <div><strong style="font-family:'Space Grotesk',sans-serif;color:var(--white)">VIKAS T.</strong><p>MBA Marketing — Digital Marketing</p></div>
+    <nav class="footer-links">
+      <a href="#/about" data-route="about">About</a><a href="#/experience" data-route="experience">Experience</a><a href="#/projects" data-route="projects">Projects</a><a href="#/skills" data-route="skills">Skills</a><a href="#/contact" data-route="contact">Contact</a>
+    </nav>
+    <div class="footer-social"><a id="footerLinkedin" href="#" target="_blank" rel="noopener">LinkedIn</a><a id="footerEmail" href="#">Email</a></div>
+  </div>
+  <p class="copyright">© 2026 Vikas T.</p>
+</footer>
+
+<script>
+const LINKEDIN_URL = "#";                        // TODO: your LinkedIn profile URL
+const EMAIL_ADDRESS = "your.email@example.com";  // TODO: your email address
+const prefersReduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
+const isTouch = matchMedia('(pointer: coarse)').matches;
+document.getElementById('footerLinkedin').href = LINKEDIN_URL;
+document.getElementById('footerEmail').href = 'mailto:' + EMAIL_ADDRESS;
+
+const journey=['BSc Physics & Mathematics','MBA','Marketing','Digital Marketing',"What's Next?"];
+const journeyColor=['#8B5CF6','#EC4899','#FB923C','#22D3EE','#A855F7'];
+const expCats=[
+ {n:'01',label:'Social Media',bullets:['Managed LinkedIn content for doctors','Created and published social media content','Supported Facebook page management']},
+ {n:'02',label:'Content',bullets:['Developed social media content','Adapted communication for healthcare audiences']},
+ {n:'03',label:'Lead Generation',bullets:['Called leads for HAI registrations','Cleaned and formatted Instagram/Facebook lead data']},
+ {n:'04',label:'Email',bullets:['Supported registration communication through Outlook emails']},
+ {n:'05',label:'Analytics',bullets:['Prepared weekly follower and impression reports','Used Excel for reporting']}
+];
+const workflow=[['IDEA','#8B5CF6'],['CREATE','#EC4899'],['PUBLISH','#FB923C'],['ENGAGE','#22D3EE'],['ANALYSE','#3B82F6']];
+const workflowHome=['CONTENT','SOCIAL','LEADS','EMAIL','ANALYTICS'];
+const marketingSkills=['Digital Marketing','Social Media Marketing','Content Marketing','Consumer Behaviour','Lead Generation','Marketing Research'];
+const tools=[['Canva','Familiar'],['Excel','Hands-on'],['Tableau','Hands-on'],['Jamovi','Hands-on'],['PowerPoint','Working Knowledge'],['Outlook','Hands-on']];
+const projects=[
+ {slug:'ai-content-trust',n:'01',accent:'#8B5CF6',title:'AI Content Disclosure & Consumer Trust',
+  tags:['MARKETING RESEARCH','CONSUMER BEHAVIOUR','AI'],
+  summary:"How AI-generated content disclosure may influence consumer trust and engagement intention toward Instagram brand posts among young adults in Bengaluru.",
+  objective:'Understand whether disclosing AI-generated content changes trust and engagement with brand posts.',
+  approach:'Survey-based study of young adult Instagram users in Bengaluru.',
+  tools2:'Survey design, statistical analysis', role:'Independent researcher (MBA project)',
+  learning:'[Add project learning]', outcome:'[Add project outcome]', visuals:['ADD RESEARCH VISUAL','ADD QUESTIONNAIRE']},
+ {slug:'tableau-dashboard',n:'02',accent:'#22D3EE',title:'COVID-19 India Tableau Dashboard',
+  tags:['TABLEAU','DATA VISUALIZATION','ANALYTICS'],
+  summary:'An interactive Tableau dashboard exploring COVID-19 trends in India — cases, deaths, testing labs and vaccination data.',
+  objective:'Turn public health data into a clear, explorable visual story.',
+  approach:'Structured public datasets into interactive Tableau views for trend exploration.',
+  tools2:'Tableau', role:'Dashboard designer & analyst',
+  learning:'[Add project learning]', outcome:'[Add project outcome]', visuals:['ADD DASHBOARD SCREENSHOT']},
+ {slug:'healthy-snacks',n:'03',accent:'#FB923C',title:'Healthy Ready-to-Eat Snacks Consumer Study',
+  tags:['CONSUMER BEHAVIOUR','RESEARCH','JAMOVI'],
+  summary:'An academic consumer study examining factors influencing purchase intention toward ready-to-eat low-calorie healthy snacks.',
+  objective:'Identify what drives purchase intention for healthy RTE snacks.',
+  approach:'Survey data analysed statistically to test purchase-intention factors.',
+  tools2:'Jamovi', role:'Researcher',
+  learning:'[Add project learning]', outcome:'[Add project outcome]', visuals:['ADD SURVEY VISUAL']},
+ {slug:'hr-triple-lens',n:'04',accent:'#A855F7',title:'HR Triple Lens — Workplace Stress',
+  tags:['RESEARCH','HR ANALYTICS','STORYTELLING'],
+  summary:'A comparative academic project examining workplace stress through multiple organisational perspectives.',
+  objective:'Compare how different organisational lenses frame workplace stress.',
+  approach:'[Add approach detail]',
+  tools2:'Presentation, research synthesis', role:'Researcher & presenter',
+  learning:'[Add project learning]', outcome:'[Add project outcome]', visuals:['ADD PRESENTATION VISUAL']},
+ {slug:'venture-fest',n:'05',accent:'#EC4899',title:'Venture Fest 8.0 — Marketing Plan',
+  tags:['EVENT MARKETING','PROMOTION','ENGAGEMENT'],
+  summary:"Marketing plan and audience-engagement strategy for Artistry Arena, a DIY pottery & games stall at Venture Fest 8.0 (RVIM).",
+  objective:'Plan promotion, positioning and participation strategy for the stall.',
+  approach:"Built the stall's marketing plan and a companion slot-registration website with online booking.",
+  tools2:'Event marketing planning, basic web build', role:'Marketing planner',
+  learning:'[Add project learning]', outcome:'[Add project outcome]', visuals:['ADD STALL VISUAL']}
+];
+
+function ProjectCard(p){
+ return `<button class="p-card reveal" style="--pc:${p.accent}" data-route="projects/${p.slug}" data-cursor="VIEW">
+  <span class="p-num">${p.n}</span><h3>${p.title}</h3><p>${p.summary}</p>
+  <div>${p.tags.map(t=>`<span class="tag sm">${t}</span>`).join('')}</div>
+  <span class="link-arrow">View project ↗</span></button>`;
+}
+function Home(){return `
+<section class="hero-split">
+ <div><span class="label reveal">MBA Marketing × Digital</span>
+ <h1 class="reveal">I'm Vikas.<br>Marketing meets <span class="grad-text">creativity.</span></h1>
+ <p class="lead reveal">MBA Marketing student exploring digital marketing, content, consumer behaviour and data-driven storytelling.</p>
+ <div class="btn-row reveal">
+  <a href="#/projects" data-route="projects" class="btn btn-grad magnetic" data-cursor="VIEW">Explore my work →</a>
+  <a href="#/about" data-route="about" class="btn btn-line">About me →</a>
+ </div>
+ <p class="scroll-cue reveal">Scroll to explore ↓</p></div>
+ <div class="float-wrap reveal">
+  <div class="fcard f1"><span class="label" style="margin:0">Content</span><strong>Social Media ↗</strong></div>
+  <div class="fcard f2"><span class="label" style="margin:0">Data</span><strong>Insights</strong></div>
+  <div class="fcard f3"><span class="label" style="margin:0">Audience</span><strong>Consumer</strong></div>
+ </div>
+</section>
+<div class="marquee"><div class="marquee-track grad-text">${['DIGITAL MARKETING','CREATIVE CONTENT','SOCIAL MEDIA','CONSUMER BEHAVIOUR','MARKETING ANALYTICS'].concat(['DIGITAL MARKETING','CREATIVE CONTENT','SOCIAL MEDIA','CONSUMER BEHAVIOUR','MARKETING ANALYTICS']).map(t=>`<span>${t}</span>`).join('')}</div></div>
+<section class="section">
+ <span class="label reveal">01 / Who I am</span>
+ <p class="lead reveal" style="color:var(--white);font-weight:700;font-size:1.4rem;max-width:30ch">I'm building my career at the intersection of marketing, creativity and digital.</p>
+ <p class="reveal" style="margin-top:18px;max-width:60ch">MBA Marketing student with a background in Physics &amp; Mathematics, currently building hands-on experience in digital marketing.</p>
+ <a href="#/about" data-route="about" class="link-arrow reveal">More about me →</a>
+</section>
+<section class="section">
+ <span class="label reveal">02 / Experience</span>
+ <h2 class="reveal" style="font-size:clamp(1.8rem,4vw,2.8rem)">From classroom<br>to campaigns.</h2>
+ <p class="role reveal" style="margin-top:20px">Global Healthcare Academy — Digital Marketing Intern</p>
+ <div class="workflow reveal">${workflowHome.map((w,i)=>`<span class="wf-step">${w}</span>`+(i<workflowHome.length-1?'<span class="wf-arrow">→</span>':'')).join('')}</div>
+ <a href="#/experience" data-route="experience" class="link-arrow reveal">View experience →</a>
+</section>
+<section class="section">
+ <span class="label reveal">03 / Selected work</span>
+ <div class="grid-3 reveal">${projects.slice(0,3).map(ProjectCard).join('')}</div>
+ <a href="#/projects" data-route="projects" class="link-arrow reveal">View all projects →</a>
+</section>`;}
+function About(){return `
+<section class="section">
+ <span class="label reveal">01</span>
+ <h1 class="reveal">About<br><span class="grad-text">me.</span></h1>
+ <p class="lead reveal">Curious by nature.<br>Marketing by choice.</p>
+ <div class="about-grid">
+  <div class="photo-frame reveal"><div class="ph-box" data-cursor="EXPLORE">[ ADD YOUR PHOTO ]</div>
+   <span class="chip chip1">Marketing</span><span class="chip chip2">Digital</span></div>
+  <p class="reveal" style="font-size:1.05rem">I'm an MBA Marketing student with a background in Physics &amp; Mathematics and hands-on exposure to digital marketing. I'm interested in understanding audiences, creating meaningful content and using digital platforms to communicate ideas effectively.</p>
+ </div>
+ <span class="label reveal">My journey</span>
+ <ol class="timeline">${journey.map((t,i)=>`<li class="reveal" style="--tc:${journeyColor[i]}">${t}</li>`).join('')}</ol>
+</section>`;}
+function Experience(){return `
+<section class="section">
+ <span class="label reveal">02</span>
+ <h1 class="reveal">Experience<br><span class="grad-text">Digital marketing in practice.</span></h1>
+ <p class="role reveal">Global Healthcare Academy — Digital Marketing Intern</p>
+ <div class="case-rows">${expCats.map(c=>`<div class="case-row reveal"><div class="case-num">${c.n}<h3>${c.label}</h3></div><ul>${c.bullets.map(b=>`<li>${b}</li>`).join('')}</ul></div>`).join('')}</div>
+ <span class="label reveal" style="margin-top:50px">Workflow</span>
+ <div class="workflow reveal">${workflow.map(([w,c],i)=>`<span class="wf-step" style="--a:${c}">${w}</span>`+(i<workflow.length-1?'<span class="wf-arrow">→</span>':'')).join('')}</div>
+</section>`;}
+function Skills(){return `
+<section class="section">
+ <span class="label reveal">04</span>
+ <h1 class="reveal">Skills<br><span class="grad-text">& toolkit.</span></h1>
+ <span class="label reveal" style="margin-top:40px">Marketing</span>
+ <div class="reveal">${marketingSkills.map(s=>`<span class="tag">${s}</span>`).join('')}</div>
+ <span class="label reveal" style="margin-top:30px">Tools</span>
+ <div class="reveal">${tools.map(([n,l])=>`<span class="tag">${n}<em>${l}</em></span>`).join('')}</div>
+</section>`;}
+function Contact(){return `
+<section class="section">
+ <h1 class="reveal">Let's make<br>something <span class="grad-text">meaningful.</span></h1>
+ <p class="lead reveal">Have an opportunity, project or conversation in mind?</p>
+ <div class="btn-row reveal">
+  <a href="mailto:${EMAIL_ADDRESS}" class="btn btn-grad magnetic" data-cursor="GO">Email me →</a>
+  <a href="${LINKEDIN_URL}" target="_blank" rel="noopener" class="btn btn-line">LinkedIn →</a>
+ </div>
+</section>`;}
+function Projects(){return `
+<section class="section">
+ <span class="label reveal">03</span>
+ <h1 class="reveal">Selected<br><span class="grad-text">work.</span></h1>
+ <div class="grid-3 reveal">${projects.map(ProjectCard).join('')}</div>
+</section>`;}
+function ProjectDetail(slug){
+ const p=projects.find(x=>x.slug===slug)||projects[0];
+ return `<section class="section">
+  <a href="#/projects" data-route="projects" class="link-arrow reveal">← All projects</a>
+  <span class="label reveal" style="margin-top:20px;color:${p.accent}">Project ${p.n}</span>
+  <h1 class="reveal">${p.title}</h1>
+  <div class="reveal">${p.tags.map(t=>`<span class="tag sm">${t}</span>`).join('')}</div>
+  <div class="detail-grid">
+   <div class="reveal">
+    <span class="label">Overview</span><p>${p.summary}</p>
+    <span class="label">Objective</span><p>${p.objective}</p>
+    <span class="label">Approach</span><p>${p.approach}</p>
+    <span class="label">Tools</span><p>${p.tools2}</p>
+    <span class="label">My role</span><p>${p.role}</p>
+    <span class="label">Learning</span><p>${p.learning}</p>
+    <span class="label">Outcome</span><p>${p.outcome}</p>
+   </div>
+   <div class="reveal">${p.visuals.map(v=>`<div class="ph-box" data-cursor="EXPLORE">[ ${v} ]</div>`).join('')}</div>
+  </div>
+ </section>`;
+}
+
+const app=document.getElementById('app'), tLayer=document.getElementById('tLayer'), navEl=document.getElementById('nav');
+let currentRoute='home';
+const io = prefersReduced? null : new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}}),{threshold:.15});
+function renderRoute(route){
+ currentRoute = route.split('/')[0] || 'home';
+ let html;
+ if(route==='') html=Home();
+ else if(route==='about') html=About();
+ else if(route==='experience') html=Experience();
+ else if(route==='skills') html=Skills();
+ else if(route==='contact') html=Contact();
+ else if(route==='projects') html=Projects();
+ else if(route.startsWith('projects/')) html=ProjectDetail(route.split('/')[1]);
+ else html=Home();
+ app.innerHTML=html;
+ scrollTo(0,0);
+ document.querySelectorAll('.nav-link').forEach(a=>a.classList.toggle('active', a.dataset.route===currentRoute));
+ if(prefersReduced) app.querySelectorAll('.reveal').forEach(el=>el.classList.add('in'));
+ else app.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+ app.querySelectorAll('.magnetic:not([data-mag-bound])').forEach(bindMagnetic);
+ navEl.classList.toggle('scrolled', scrollY>10);
+ app.focus();
+}
+function goTo(path){
+ if(prefersReduced){ location.hash='/'+path; return; }
+ tLayer.classList.remove('out'); tLayer.classList.add('in');
+ setTimeout(()=>{ location.hash='/'+path; tLayer.classList.remove('in'); tLayer.classList.add('out'); setTimeout(()=>tLayer.classList.remove('out'),340); }, 300);
+}
+document.addEventListener('click', e=>{ const el=e.target.closest('[data-route]'); if(el){ e.preventDefault(); goTo(el.dataset.route); } });
+addEventListener('hashchange', ()=>renderRoute(location.hash.replace(/^#\/?/,'')));
+addEventListener('scroll', ()=>navEl.classList.toggle('scrolled', scrollY>10), {passive:true});
+
+const hamburger=document.getElementById('hamburger'), navLinks=document.getElementById('navLinks');
+hamburger.addEventListener('click', ()=>{ const open=navLinks.classList.toggle('open'); hamburger.classList.toggle('open',open); hamburger.setAttribute('aria-expanded',open); });
+navLinks.querySelectorAll('a').forEach(a=>a.addEventListener('click', ()=>{ navLinks.classList.remove('open'); hamburger.classList.remove('open'); hamburger.setAttribute('aria-expanded','false'); }));
+
+function bindMagnetic(btn){
+ btn.dataset.magBound='1';
+ btn.addEventListener('mousemove', e=>{ const r=btn.getBoundingClientRect(); btn.style.transform=`translate(${(e.clientX-r.left-r.width/2)*.25}px,${(e.clientY-r.top-r.height/2)*.35}px)`; });
+ btn.addEventListener('mouseleave', ()=> btn.style.transform='');
+}
+if(!isTouch && !prefersReduced) document.querySelectorAll('.magnetic').forEach(bindMagnetic);
+
+if(!isTouch){
+ document.body.classList.add('has-cursor');
+ const dot=document.querySelector('.cursor-dot'), ring=document.querySelector('.cursor-ring'), label=ring.querySelector('.cursor-label');
+ let mx=innerWidth/2,my=innerHeight/2,rx=mx,ry=my;
+ addEventListener('mousemove', e=>{ mx=e.clientX; my=e.clientY; dot.style.transform=`translate(${mx}px,${my}px)`; if(prefersReduced) ring.style.transform=`translate(${mx}px,${my}px)`; });
+ if(!prefersReduced)(function loop(){ rx+=(mx-rx)*.2; ry+=(my-ry)*.2; ring.style.transform=`translate(${rx}px,${ry}px)`; requestAnimationFrame(loop); })();
+ document.addEventListener('mouseover', e=>{
+  const navHit=e.target.closest('.nav-link,.nav-logo');
+  const cur=e.target.closest('[data-cursor]');
+  ring.classList.toggle('small', !!navHit);
+  if(navHit){ ring.classList.remove('hover'); label.textContent=''; }
+  else if(cur){ ring.classList.add('hover'); label.textContent=cur.dataset.cursor; }
+  else { ring.classList.remove('hover'); label.textContent=''; }
+ });
+}
+renderRoute(location.hash.replace(/^#\/?/,''));
+</script>
+</body>
+</html>
